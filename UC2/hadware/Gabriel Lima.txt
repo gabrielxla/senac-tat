@@ -1,0 +1,65 @@
+PC de 3K
+
+Processador AMD Ryzen 5 5600, 3.5GHz (4.4GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100000927BOX
+R$ 879,99
+Placa Mãe MSI B450M-A PRO MAX, Chipset B450, AMD AM4, MATX, DDR4
+R$ 459,90
+Placa de Vídeo MSI NVIDIA GeForce GTX 1650 Ventus XS OC, 4GB, GDDR6, 128Bit, GTX1650D6VXSOC
+R$ 849,99
+Memória DDR4 Hiksemi Armor, 8GB, 3200Mhz, HSC408U32Z2 8G
+R$ 99,99x2=200
+SSD Adata Legend 710, 512GB, M.2 2280 NVMe Leitura 2.400MBs, Gravação 1.600MBs, ALEG-710-512GCS
+R$ 209,90
+
+Fonte SuperFrame, 500W, 80 Plus Bronze, PFC Ativo, Cabos Flat, SF-B500FL
+R$ 269,99
+
+Cooler para Processador Redragon Tyr, 120mm, Rainbow, Intel-AMD, CC-9104
+R$ 104,99
+
+Gabinete Gamer Ninja Cloud, Mid Tower, Vidro Temperado, ATX, Black, Sem Fonte, Com 4 Fans Rainbow
+R$ 199,99
+ total:$3183,00	
+
+PC de 10k
+Processador AMD Ryzen 9 7900, 5.4GHz Max Turbo, Cache 76MB, AM5, 12 Núcleos, Vídeo Integrado  100-100000590BOX
+R$ 2600,00
+
+Placa Mãe Gigabyte X670 Aorus Elite AX, Chipset X670, AMD AM5, ATX, DDR5
+R$ 2.439,90
+
+Placa de Vídeo Gigabyte NVIDIA GeForce RTX 4060 WINDFORCE OC, 8GB, GDDR6, DLSS, Ray Tracing, GV-N4060WF2OC-8GD
+R$ 1.799,99
+
+Memória DDR5 Kingston FURY Beast, 16GB (2x8GB), 5200MHz, Black, KF552C40BBK2-16
+R$ 474,90x2=948
+
+Fonte SuperFrame, 1000W, 80 Plus Gold, Full Modular, Com Conector PCIe 5.0, PFC Ativo, SF-G1000M
+R$ 799,99
+
+SSD Adata Legend 850 1TB, M.2 2280 NVMe 1.4, Leitura 5000MBs e Gravação 4500MBs, ALEG-850-1TCS
+R$ 546,90
+Water Cooler Cooler Master MasterLiquid 360L Core Street Fighter 6 Luke, ARGB, 360mm, Intel-AMD, White, MLW-D36M-A17PZ-LK
+R$ 799,90
+Gabinete Gamer Liketec Zeus V2, Mid Tower, Vidro Temperado, RGB, ATX, Black, Sem Fonte, Com 6 Fans, LC-CB3X3-ZEUS-2056
+R$ 549,90
+TOTAL: 10.484
+
+Meu pc
+Processador AMD Ryzen 5 5600, 3.5GHz (4.4GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100000927BOX
+R$ 879,99
+Placa Mãe Gigabyte B550M DS3H AC, Wi-Fi, Chipset B550, AMD AM4, mATX, DDR4
+R$ 789,99
+Placa de Vídeo Gigabyte AMD Radeon RX 6600 EAGLE 8G, 8GB, GDDR6, FSR, Ray Tracing
+R$ 1.399,99
+Memória DDR4 Hiksemi Armor, 8GB, 3200Mhz, HSC408U32Z2 8G
+R$ 99,99x2=200
+SSD Adata Legend 710, 512GB, M.2 2280 NVMe Leitura 2.400MBs, Gravação 1.600MBs, ALEG-710-512GCS
+R$ 209,90
+Fonte SuperFrame, 700W, 80 Plus Bronze, PFC Ativo, Cabos Flat, SF-B700FL
+R$ 329,99
+Cooler para Processador DeepCool Gammaxx AG400, 120mm, Intel-AMD, R-AG400-BKNNMN-G-1
+R$ 149,00
+Gabinete Gamer Gamdias Aura GC2 Elite, Vidro Temperado, ATX, Mid Tower, RGB, Com 4 Fans, Sem Fonte, Black
+R$ 249,90
+Total=4200,00
