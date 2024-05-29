@@ -1,0 +1,97 @@
+!configuração router
+!Acessando o modo EXEC Privilegiado
+enable
+
+!Configuração de Data/Hora em Inglês, você pode usar o Mês abreviado ou completo na configuração
+clock set 19:54:00 05 May 2024
+
+	!Acessando o modo de Configuração Global de comandos
+	configure terminal
+  
+		!Configuração do nome do router
+		hostname rt-1941-1
+
+		!Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
+		service password-encryption
+        
+        service timestamps log datetime msec
+		service timestamps debug datetime msec
+
+		!Desativando a resolução de nomes de domínio
+		no ip domain-lookup
+
+        security passwords min-length 8
+
+		!Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
+		enable secret 123@senac
+
+		!Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
+		ip domain-name senac.br
+
+        crypto key generate rsa general-keys modulus 1024
+
+		!Habilitando a versão 2 do serviço de SSH Server
+		ip ssh version 2
+
+		!Habilitando o tempo de inatividade para novas conexões do SSH Server
+		ip ssh time-out 60
+
+		!Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
+		ip ssh authentication-retries 2
+
+        login block-for 120 attempts 2 within 60
+
+		!Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
+		line console 0
+
+			!Forçando fazer login local utilizando usuário e senha locais do switch
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			password vaamonde@pti
+
+			!Sincronizando as mensagens de logs na tela
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso do console
+			exec-timeout 5 30
+			
+			!Saindo da configuração da linha console
+			exit
+
+            line aux 0
+
+			!Forçando fazer login local utilizando usuário e senha locais do switch
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			password 123@senac
+
+			!Sincronizando as mensagens de logs na tela
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso do console
+			exec-timeout 5 30
+            speed 115200
+            flowcontrol hardware
+
+            line vty 0 4
+
+			!Forçando fazer login local utilizando usuário e senha locais do Router
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			password 123@senac
+
+			!Sincronizando as mensagens de logs na tela
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso da linha virtual
+			exec-timeout 5 30
+
+			!Configuração do tipo de protocolo de transporte de entrada
+			transport input ssh
+
+			!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+			end
+		
