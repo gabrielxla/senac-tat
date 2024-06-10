@@ -1,0 +1,125 @@
+!configuração router
+
+		!Configuração do nome do router
+		hostname rt-1941-1
+
+		!Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
+		service password-encryption
+        
+        service timestamps log datetime msec
+		service timestamps debug datetime msec
+
+		!Desativando a resolução de nomes de domínio
+		no ip domain-lookup
+
+        security passwords min-length 8
+
+		!Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
+		enable secret 123@senac
+
+		!Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
+		ip domain-name senac.br
+
+        crypto key generate rsa general-keys modulus 1024
+
+		!Habilitando a versão 2 do serviço de SSH Server
+		ip ssh version 2
+
+		!Habilitando o tempo de inatividade para novas conexões do SSH Server
+		ip ssh time-out 60
+
+		!Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
+		ip ssh authentication-retries 2
+
+        login block-for 120 attempts 2 within 60
+
+		!Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
+		line console 0
+
+			!Forçando fazer login local utilizando usuário e senha locais do switch
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso do console
+			exec-timeout 5 30
+			
+			!Saindo da configuração da linha console
+			exit
+
+            line aux 0
+
+			!Forçando fazer login local utilizando usuário e senha locais do switch
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			password 123@senac
+
+			!Sincronizando as mensagens de logs na tela
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso do console
+			exec-timeout 5 30
+            speed 115200
+            flowcontrol hardware
+
+            line vty 0 4
+
+			!Forçando fazer login local utilizando usuário e senha locais do Router
+			login local
+
+			!Habilitando senha de acesso do Tipo-7 Password
+			password 123@senac
+
+			!Sincronizando as mensagens de logs na tela
+			logging synchronous
+
+			!Habilitando o tempo de inatividade de uso da linha virtual
+			exec-timeout 5 30
+
+			!Configuração do tipo de protocolo de transporte de entrada
+			transport input ssh
+
+			!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+			end
+--------------------------------------------------------------------------------------------
+!configuração interface roteador
+
+  !Configurando a Interface Física GigabitEthernet 0/0
+		interface gigabitEthernet 0/0
+		
+			!Configuração da Descrição da Interface Física do Router
+			description Interface de Gateway da Rede LAN Router rt-1941-1
+
+            !Configuração do Endereçamento IPv4 da Interface Física do Router
+            ip address 192.168.1.254 255.255.255.0
+            !Inicializando a Interface Física do Router
+            no shutdown
+  
+			!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+			end
+            !Salvando as configurações da memória RAM para a memória NVRAM
+             write
+	
+            !Visualizando as configurações da memória RAM
+             show running-config
+
+            !Visualizando as configurações das Interfaces
+             show ip interface brief
+
+            !Visualizando informações detalhadas da Interface
+             show interface gigabitEthernet 0/0
+
+            !Visualizando informações de roteamento
+             show ip route
+
+            !Testando a conectividade de rede do roteador
+             ping 192.168.1.254
+             ping 192.168.1.250
+             ping 192.168.1.251
+             ping 192.168.1.10
+
+            !Testando o acesso remoto utilizando o SSH
+             ssh -l admin 192.168.1.2
+		

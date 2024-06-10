@@ -1,0 +1,33 @@
+!Comentários - Desativar comandos
+enable
+!Configuração data e hora
+ clock set 15:15:00 22 May 2024
+
+!Modo de configuração Global
+configure terminal
+    
+    !configuração Hostname
+    hostname sw-01
+
+    service password-encryption
+    service timestamps log datetime msec
+    no ip domain-lookup 
+    banner motd ho
+    enable secret 123@senac
+    username senac secret 123@senac
+    username gabriel password 123@senac
+    username admin privilege 15 secret 123@senac
+    line console 0    
+       login local
+       logging synchronous
+       exec-timeout 5 30
+       end
+
+    !Sair de todos os modos
+     end
+
+    !Salvando da RAM para NVRAM
+    copy running-config startup-config
+
+    !Verificação das configurações
+    show running-config
