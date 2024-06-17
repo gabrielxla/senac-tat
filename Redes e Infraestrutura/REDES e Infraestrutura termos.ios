@@ -1,0 +1,29 @@
+!Redes e Infraestrutura
+ 
+ Protocolo:E uma linguagem que permite os computadores comunicarem com servidores ou outras maquinas, podendo existir diversos protocolos para determinadas necessidade.
+
+ IP:E o Protocolo mais usado atualmente sendo usado na internet.
+ 
+ TCP-IP:E a mesma coisa que o IP, também sendo um protocolo, aonde a maioria das empresas adotaram
+ 
+ Pacotes Novell: Novell tinha um protoco proprio que não e mais usado, foi substituido pelo IP
+ 
+ Pacotes Apple: Apple tinha um protoco proprio que não e mais usado, foi substituido pelo IP
+
+ ICMP: E um Protocolo usado para verificar a conexão de uma rede IP, e solucionando problemas na hora de enviar dados ou relatando
+
+ Ping da Morte:E um termo usado, em uma falha aproveitada no ICMP no comamando "ping" para testar a conexão entre as maquinas enviando pacotes, aonde eram enviados pacotes muito grandes repetivamente
+
+ Interface de Rede:uma interface de rede é o ponto de conexão entre um dispositivo de rede e uma rede de comunicação
+
+ LAN,WAN,MAN,RAN,CAN,PAN,SAN,WLAN:São tipos de redes, sendo local/residencial,global,metropolitana,pessoal etc
+
+ TCP: ele envia pacotes e caso perca algum pacote ele reenvia tendo 100% da certeza que todos chegaram
+
+ UDP: ele envia os pacotes uma vez apenas e caso perca nao sera reenviado, utilizado mais em ações aovivo  
+
+ CSMA-CD: Protocolo que impede que os pacotes/dados se colidem
+
+ HUB: um um dispositivo em que cria uma rede,interliga os computadores mas funciona apenas em broadcast, ja nao e mais utilizado
+
+ switch:E a evoluçãõ do HUB em que ele trasmite os dados/pacotes em unicast e broadcast criando dominios de colisão separados e um grande dominio que funciona em broadcast
