@@ -1,0 +1,29 @@
+!Switch 2960 
+enable
+    configure terminal 
+       interface range GigabitEthernet 0/1 - 2
+            switchport mode trunk
+            switchport nonegotiate
+            exit
+        interface range FastEthernete  0/23 - 24 
+            switchport mode trunk
+            switchport nonegotiate
+            end
+write
+
+!Switch Mutilayer 3650
+enable
+    configure terminal
+        interface range GigabitEthernet 1/0/1 - 4
+            description interface de trunk
+            switchport mode trunk
+            switchport nonegotiate
+            end
+       
+write  
+show running config
+show interface trunk
+
+        
+            
+        
