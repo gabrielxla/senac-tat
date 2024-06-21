@@ -1,0 +1,21 @@
+interface servidores e acess Point 
+
+!enable
+    show ip interface brief
+    configure terminal
+        interface range gigabitEthernete 1/0/10 -12
+            descripition interface dos servidores
+            switchport mode access 
+            switchport nonegotiate
+            switchport access vlan 20
+            exit
+
+        interface gigabitEthernete 1/0/23
+            descripition interface wireless
+            switchport mode access 
+            switchport nonegotiate
+            switchport access vlan 30
+            end 
+write 
+
+
