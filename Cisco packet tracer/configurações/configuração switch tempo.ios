@@ -1,0 +1,13 @@
+!configuração switch 3650 tempo
+enable
+    configure terminal
+        spanning-tree vlan 1-60 root primary
+        spanning-tree mode rapid-pvst
+        end
+wr
+
+!configuração switch 2960 tempo
+enable
+    configure terminal
+        spanning-tree mode rapid-pvst
+        end
