@@ -1,0 +1,25 @@
+!configuração gateway
+enable
+    configure terminal
+        ip routing
+        interface vlan 20
+            description Interface Gateway da vlan 20
+            ip address 192.168.20.254 255.255.255.0
+            no shutdown
+            end 
+wr
+===========================
+enable
+    configure terminal
+        interface vlan 30
+            description Interface Gateway da VLAN 30
+            ip address 192.168.30.254 255.255.255.0
+            ip helper-address 192.168.20.2
+            no shutdown
+            end 
+wr
+
+prompt de comand
+ipconfig /release
+ipconfig /renew
+
