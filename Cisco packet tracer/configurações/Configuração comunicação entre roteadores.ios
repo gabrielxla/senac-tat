@@ -1,0 +1,33 @@
+!Configuração Router
+enable
+    configure terminal
+        interface GigabitEthernete 0/0/0
+            description Interface WAN SPO para RJO 
+            ip address 10.0.0.1 255.255.255.252
+            no shutdown
+Wr
+=================
+!cofiguração SW 3650
+en 
+    configure terminal
+        interface Gi 1/0/24
+            description Interface de conexão com o roteador 
+            no switchport 
+            ip address 192.168.2.1 255.255.255.0
+            no shutdown
+            end 
+wr
+=========================
+configuração router SPO
+enable
+    configure terminal
+            ip route 0.0.0.0 .0.0.0.0 10.0.0.2
+            end
+wr
+========================
+!Configuração router RJO
+en
+    configure terminal
+        ip route 192.168.1.0 255.255.255.0 10.0.0.1
+        end
+wr
