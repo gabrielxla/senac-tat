@@ -1,8 +1,8 @@
 **Comandos Terminal**
 
-    !(Configuração do router)
-    lan, wan, nome, protocolo de roteamento e salvar
-    .
+**!(Configuração do router)**
+lan, wan, nome, protocolo de roteamento e salvar
+    
     enable
     configure terminal
     hostname SP
@@ -11,6 +11,8 @@
     no shutdown
     description Porta Lan de SP
     exit
+    
+
     interface s0/0
     no shutdown
     ip add 20.0.0.1 255.0.0.0
