@@ -20,7 +20,8 @@ lan, wan, nome, protocolo de roteamento e salvar
     clock rate 128000
     bandwidth 128
     exit
-    router rip
+    
+    router rip (Protocolo de Roteamento)
     network 20.0.0.0
     network 192.168.10.0
     end
