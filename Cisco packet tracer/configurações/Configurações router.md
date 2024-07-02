@@ -1,4 +1,4 @@
-**configurações porta**
+**Comandos Terminal**
 
     !(Configuração do router)
     lan, wan, nome, protocolo de roteamento e salvar
