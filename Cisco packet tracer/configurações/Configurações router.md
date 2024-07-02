@@ -11,7 +11,7 @@ lan, wan, nome, protocolo de roteamento e salvar
     no shutdown
     description Porta Lan de SP
     exit
-    
+	
     interface s0/0 (WAN)
     no shutdown
     ip add 20.0.0.1 255.0.0.0
