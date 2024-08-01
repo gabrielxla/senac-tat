@@ -2,4 +2,6 @@
 
 **DIA 01**
   
-  Criando espelhamento (raid 1) e backups dentro da maquina virtual, e simulando a perda dos a HD, após isso recuperando os dados dos espelhamentos e criando outro espelhamento
+  Criando espelhamento (raid 1) e backups dentro da maquina virtual, e simulando a perda dos a HD, após isso recuperando os dados dos espelhamentos e criando outro espelhamento.
+
+  Criando uma Paridade (RAID 5) com tres HD 
