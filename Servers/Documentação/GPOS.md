@@ -1,4 +1,4 @@
-GPOS
+## GPOS
 1. Evite que o Windows armazene o LM Hash
 O Windows gera e armazena senhas de contas de usuários em “hashes”. O Windows gera um hash do LAN Manager (LM hash) e um hash do Windows NT (NT hash) de senhas. Ele os armazena no banco de dados local do SAM (Security Accounts Manager) ou no Active Directory.
 
