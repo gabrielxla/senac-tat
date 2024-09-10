@@ -1,6 +1,6 @@
 ## Comandos básicos:
 
-    clear (limpar a tela)
+    clear OU  ctrl+L (limpar a tela) 
     shutdown -h now (deligar o servidor)
     apt update (atualizar o repositório)
     apt install vim (instalar o editor de textos)
