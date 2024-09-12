@@ -33,29 +33,30 @@ Configuração da rede (cenário)
 
 salvar e reiniciar o serviço de rede
 
-systemctl restart networking
+    systemctl restart networking
 
 ______________________________________________
 Configuração do serviço DHCP (Servidor de IPs)
 
-apt update
-apt install isc-dhcp-server
+    apt update
+    apt install isc-dhcp-server
 
-ip link show (verificar as interfaces de rede)
+    ip link show (verificar as interfaces de rede)
 
 1) Configurar a interface LAN para o DHCP
 
-cd /etc/default
-# fazer uma cópia do arquivo de configuração
-cp isc-dhcp-server isc-dhcp-server.old
+        cd /etc/default
+ # fazer uma cópia do arquivo de configuração
+        cp isc-dhcp-server isc-dhcp-server.old
 
     vim isc-dhcp-server
     INTERFACES="enp0s8" (verificar antes a interface)
 
 2) Configurar o script
-cd /etc/dhcp
+
+        cd /etc/dhcp
 # fazer uma cópia do arquivo de configuração
-cp dhcpd.conf dhcpd.conf.old
+    cp dhcpd.conf dhcpd.conf.old
 
     vim dhcpd.conf
 
@@ -67,8 +68,8 @@ cp dhcpd.conf dhcpd.conf.old
     37   option routers 192.168.0.1;
     38 }
 
-salvar e reiniciar o serviço
-systemctl restart isc-dhcp-server
-systemctl status isc-dhcp-server
+    salvar e reiniciar o serviço
+    systemctl restart isc-dhcp-server
+    systemctl status isc-dhcp-server
 
 
