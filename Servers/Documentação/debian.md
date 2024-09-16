@@ -72,4 +72,86 @@ Configuração do serviço DHCP (Servidor de IPs)
     systemctl restart isc-dhcp-server
     systemctl status isc-dhcp-server
 
+    Ativar o SSH
+
+No Debian por padrão apenas usuários podem se
+conectar remotamente no servidor
+
+putty -> ip do servidor
+- autenticar como usuário
+- digitar su para privilégios de root
+
+_____________________________________________
+DNS (Domain Name Server)
+apt install dnsmasq
+systemctl status dnsmasq
+cd /etc
+ls dnsmasq*
+mv dnsmasq.conf dnsmasq.conf.old
+vim dnsmasq.conf
+
+    1  # LAN
+    2  interface=enp0s8
+    3  bind-interfaces
+    4
+    5  # DNS Upstream
+    6  server=8.8.8.8
+    7  server=8.8.4.4
+    8
+    9  # Bloqueio de sites (lista negra)
+    10 address=/netflix.com/0.0.0.0
+    11 address=/facebook.com/0.0.0.0
+    10
+    11 # cache
+    12 cache-size=1000
+
+salvar
+systemctl restart dnsmasq
+
+____________________________________________
+Firewall
+NETFILTER (configurações)
+
+cd /etc
+Arquivo de configuração dos módulos netfilter(firewall)
+cp sysctl.conf sysctl.conf.old
+vim sysctl.conf
+28 descomentar esta linha(28) para ativar o NAT
+
+cd /etc
+ls nftables*
+cp nftables.conf nftables.conf.old
+vim nftables 
+
+    1  #!/usr/sbin/nft -f
+    2
+    3  flush ruleset
+    4
+    5  table ip nat {
+    6     chain postrouting {
+    7         type nat hook postrouting priority 100;
+    8         policy accept;
+    9         oif "enp0s3" masquerade
+    10    }
+    11 }
+
+salvar, reiniciar o serviço
+systemctl restart nftables
+systemctl status nftables
+systemctl enable nftables   
+
+Diagnóstico
+systemctl status isc-dhcp-server
+systemctl status dnsmasq
+systemctl status nftables
+
+ping www.google.com (debian e windows)
+ping 192.168.0.1 (windows -> debian)
+
+
+
+
+
+
+
 
