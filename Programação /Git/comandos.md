@@ -16,5 +16,8 @@
     
     code . -r
 
+//comando para tirar os dados de origim do arquivo
+
+    git remote remove origin
 
 
