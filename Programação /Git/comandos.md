@@ -6,6 +6,7 @@
 
     git add "nome do arquivo"
     git commit (descrever a modificação que fez no projeto) -m "descrição"
+    git push -U origin main
 
 //comando para clonar projetos do github
 
